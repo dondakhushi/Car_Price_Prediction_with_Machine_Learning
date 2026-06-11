@@ -19,3 +19,17 @@ print(df.info())
 print(df.describe())
 print(df.isnull().sum())
 
+# Data Preprocessing
+# Convert Categorical Data into Numbers
+le = LabelEncoder()
+
+df['Fuel_Type'] = le.fit_transform(df['Fuel_Type'])
+df['Selling_type'] = le.fit_transform(df['Selling_type'])
+df['Transmission'] = le.fit_transform(df['Transmission'])
+
+# Create Car Age Feature
+df['Current_Year'] = 2025
+df['Car_Age'] = df['Current_Year'] - df['Year']
+
+df.drop(['Year', 'Car_Name', 'Current_Year'], axis=1, inplace=True)
+
