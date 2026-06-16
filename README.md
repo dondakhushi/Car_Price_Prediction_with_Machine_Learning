@@ -116,4 +116,4 @@ Indicates how well the model explains the variance in the data.
 Clone the repository:
 
 ```bash
-https://github.com/dondakhushi/Car_Price_Prediction_with_Machine_Learning.git
+git clone https://github.com/dondakhushi/Car_Price_Prediction_with_Machine_Learning.git
